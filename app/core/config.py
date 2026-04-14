@@ -10,14 +10,14 @@ class Settings(BaseSettings):
     app_port: int = Field(default=8000, alias="APP_PORT")
     openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
     database_url: str = Field(
-        default="postgresql+psycopg://bridgeai:bridgeai@localhost:5432/bridgeai",
+        default="postgresql+psycopg://translate_ai:translate_ai@localhost:5432/translate_ai",
         alias="DATABASE_URL",
     )
     redis_url: str = Field(default="redis://localhost:6379/0", alias="REDIS_URL")
     minio_endpoint: str = Field(default="http://localhost:9000", alias="MINIO_ENDPOINT")
     minio_access_key: str = Field(default="minioadmin", alias="MINIO_ACCESS_KEY")
     minio_secret_key: str = Field(default="minioadmin", alias="MINIO_SECRET_KEY")
-    minio_bucket: str = Field(default="bridgeai-audio", alias="MINIO_BUCKET")
+    minio_bucket: str = Field(default="translate-ai-audio", alias="MINIO_BUCKET")
     tmp_dir: Path = Field(default=Path("./tmp"), alias="TMP_DIR")
     log_dir: Path = Field(default=Path("./logs"), alias="LOG_DIR")
     stt_window_seconds: int = Field(default=5, alias="STT_WINDOW_SECONDS")
@@ -38,4 +38,3 @@ def get_settings() -> Settings:
     settings.tmp_dir.mkdir(parents=True, exist_ok=True)
     settings.log_dir.mkdir(parents=True, exist_ok=True)
     return settings
-

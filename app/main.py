@@ -17,7 +17,7 @@ async def lifespan(_: FastAPI):
 
 
 settings = get_settings()
-app = FastAPI(title="BridgeAI POC", lifespan=lifespan)
+app = FastAPI(title="translate.ai POC", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origin_list,

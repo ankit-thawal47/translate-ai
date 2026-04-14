@@ -1,6 +1,6 @@
-# BridgeAI POC Implementation Tasks
+# translate.ai POC Implementation Tasks
 
-This checklist maps directly to [tech_approach.md](/Users/ankit/personal-workspace/bridgeAI/tech_approach.md).  
+This checklist maps directly to `tech_approach.md`.  
 Scope is POC v1 only.
 
 ## Phase 0: Project Setup

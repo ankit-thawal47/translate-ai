@@ -1,7 +1,7 @@
 [project]
-name = "bridgeai"
+name = "translate-ai"
 version = "0.1.0"
-description = "BridgeAI POC backend"
+description = "translate.ai POC backend"
 readme = "tech_approach.md"
 requires-python = ">=3.12"
 dependencies = [

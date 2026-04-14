@@ -10,7 +10,7 @@ def configure_logging(settings: Settings) -> None:
         datefmt="%Y-%m-%dT%H:%M:%S",
     )
     file_handler = RotatingFileHandler(
-        settings.log_dir / "bridgeai.log",
+        settings.log_dir / "translate-ai.log",
         maxBytes=5 * 1024 * 1024,
         backupCount=3,
     )
@@ -24,4 +24,3 @@ def configure_logging(settings: Settings) -> None:
     root_logger.handlers.clear()
     root_logger.addHandler(file_handler)
     root_logger.addHandler(stream_handler)
-

@@ -1,6 +1,6 @@
-# BridgeAI POC
+# translate.ai POC
 
-BridgeAI is a local-first POC for audio-first English-to-Hindi voice translation.
+translate.ai is a local-first POC for audio-first English-to-Hindi voice translation.
 
 The current repo includes:
 
@@ -130,6 +130,6 @@ cd ..
 
 ## Important Files
 
-- [tech_approach.md](/Users/ankit/personal-workspace/bridgeAI/tech_approach.md)
-- [tasks.md](/Users/ankit/personal-workspace/bridgeAI/tasks.md)
-- [idea.md](/Users/ankit/personal-workspace/bridgeAI/idea.md)
+- `tech_approach.md`
+- `tasks.md`
+- `idea.md`

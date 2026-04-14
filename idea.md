@@ -56,4 +56,4 @@ What matters is that English speech goes in and clear Hindi audio comes out with
 
 ## Short Positioning
 
-BridgeAI is a POC for audio-first English-to-Hindi speech mediation, designed to turn spoken English into clear and natural Hindi audio with a minimal user experience.
+translate.ai is a POC for audio-first English-to-Hindi speech mediation, designed to turn spoken English into clear and natural Hindi audio with a minimal user experience.
