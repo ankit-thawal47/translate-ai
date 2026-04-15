@@ -9,6 +9,13 @@ class TranscriptResult:
 
 
 @dataclass(slots=True)
+class NormalizationResult:
+    text: str
+    model: str
+    detected_tone: str = "neutral"
+
+
+@dataclass(slots=True)
 class TranslationResult:
     text: str
     model: str
@@ -24,6 +31,11 @@ class TTSResult:
 
 class STTProvider:
     async def transcribe_file(self, audio_path: Path) -> TranscriptResult:  # pragma: no cover - interface
+        raise NotImplementedError
+
+
+class NormalizationProvider:
+    async def normalize_for_translation(self, text: str) -> NormalizationResult:  # pragma: no cover
         raise NotImplementedError
 
 

@@ -8,8 +8,6 @@ FILLER_PATTERNS = [
     r"\byou know\b",
 ]
 
-# Whisper hallucinates these on silent or very short audio segments.
-# Exact-match after stripping punctuation/whitespace (case-insensitive).
 WHISPER_HALLUCINATIONS = {
     "thanks for watching",
     "thank you for watching",
@@ -47,4 +45,3 @@ def clean_transcript(text: str) -> str:
     if cleaned:
         cleaned = cleaned[0].upper() + cleaned[1:]
     return cleaned
-

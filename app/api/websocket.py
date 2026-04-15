@@ -259,7 +259,15 @@ class SessionRegistry:
         session.pending_text = ""
         session.held_segment_count = 0
 
-        translation = await self.providers.translate_to_hindi(combined, tone="auto")
+        normalization = await self.providers.normalize_for_translation(combined)
+        logger.info(
+            "segment.normalized session_id=%s segment_index=%s tone=%s text=%r",
+            session.session_id,
+            session.segment_index,
+            normalization.detected_tone,
+            normalization.text,
+        )
+        translation = await self.providers.translate_to_hindi(normalization.text, tone=normalization.detected_tone)
         logger.info(
             "segment.translation session_id=%s segment_index=%s tone=%s combined_text=%r hindi=%r",
             session.session_id,
@@ -329,7 +337,8 @@ class SessionRegistry:
             session.session_id,
             combined,
         )
-        translation = await self.providers.translate_to_hindi(combined, tone="auto")
+        normalization = await self.providers.normalize_for_translation(combined)
+        translation = await self.providers.translate_to_hindi(normalization.text, tone="auto")
         logger.info(
             "segment.translation session_id=%s segment_index=%s tone=%s combined_text=%r hindi=%r",
             session.session_id,
